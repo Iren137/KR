@@ -1,0 +1,7 @@
+<RCC>
+    <qresource>
+        <file>input_exercises.txt</file>
+        <file>pick_exercises.txt</file>
+        <file>minions.gif</file>
+    </qresource>
+</RCC>

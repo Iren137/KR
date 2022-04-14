@@ -3,12 +3,14 @@
 
 #include <QString>
 
-struct PickExercise {
+#include "exercise.h"
+
+struct PickExercise : public Exercise {
+  ExerciseType Type() override {
+    return pick_an_option;
+  }
   QString text;
-  int correct_answer;
-  QString answer1;
-  QString answer2;
-  QString answer3;
+  QString variants[3] = {};
 };
 
 #endif //PICK_EXERCISE_H

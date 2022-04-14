@@ -1,0 +1,25 @@
+12
+1.wav
+This car costs much more than my house.
+2.wav
+The light is so bright here.
+3.wav
+Bob and Jane got married yesterday.
+4.wav
+I am going to visit granny tomorrow.
+5.wav
+Brain is much more efficient than muscles.
+6.wav
+The internet is the greatest invention of mankind.
+7.wav
+Work hard to earn money.
+8.wav
+Her husband had a Birthday yesterday.
+9.wav
+To be honest, I would never do this.
+10.wav
+How can she solve such problems so fast?
+11.wav
+What is the shortest wat to the museum?
+12.wav
+What should I do to get rid of this?

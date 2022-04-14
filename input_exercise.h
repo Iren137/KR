@@ -3,9 +3,14 @@
 
 #include <QString>
 
-struct InputExercise {
+#include "exercise.h"
+
+struct InputExercise : public Exercise {
+  ExerciseType Type() override {
+    return input_answer;
+  }
+
   QString text;
-  QString answer;
 };
 
 #endif //INPUT_EXERCISE_H

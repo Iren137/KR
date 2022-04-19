@@ -11,11 +11,14 @@ class MainPage : public QWidget {
   Q_OBJECT
  public slots:
   void ShowContextMenu(const QPoint& pos);
+
  public:
   MainPage(QWidget* parent);
   void SetScoreLabel(int score);
+  void SetStyle();
+  void DoConnections();
 
- // private:
+ private:
   QGridLayout layout_{this};
 
   QLabel difficulty_label{"Difficulty", this};
@@ -32,6 +35,8 @@ class MainPage : public QWidget {
   QPushButton input_answer_button_{"Input Answer"};
   QPushButton audio_button_{"Audio"};
   QPushButton mixed_button_{"Mixed"};
+
+  friend class Controller;
 };
 
 #endif //MAIN_PAGE_H

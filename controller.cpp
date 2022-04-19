@@ -1,15 +1,20 @@
-#include "main_page.h"
-#include "controller.h"
-#include "exercise_page.h"
-#include <iostream>
-#include <QMediaPlayer>
 #include <QMediaContent>
 #include <QApplication>
 #include <QShortcut>
 
+#include "main_page.h"
+#include "controller.h"
+#include "exercise_page.h"
+
 Controller::Controller()
     : main_page_(new MainPage(this)),
       exercise_page(new ExercisePage(this)) {
+  resize(700, 500);
+  setMinimumSize(650,400);
+
+  setObjectName("Whole");
+  setStyleSheet(
+      "#Whole { background-color : rgba(190, 230, 200, 250) } ");
 
   setting.setValue("difficulty", setting.value("difficulty", "easy"));
   setting.setValue("sound", setting.value("sound", "on"));
@@ -21,7 +26,6 @@ Controller::Controller()
   main_page_->sound_widget.setCurrentIndex(
       setting.value("sound") == "on" ? 0 : 1);
 
-
   addWidget(main_page_);
   addWidget(exercise_page);
 
@@ -32,7 +36,7 @@ Controller::Controller()
   movie_msg_layout->addWidget(&movie_label, 1, 0, Qt::AlignCenter);
   movie_msg_layout->addWidget(&leave_movie_dialog_button, 2, 0, Qt::AlignCenter);
 
-  no_attempts_message.setText("You have used all your attempts :(");
+  no_attempts_message.setText("You have used all your lives :(");
 
   close_dialog.setWindowTitle("Are you sure?");
   close_dialog.setText("Are you sure to close the app?");
@@ -116,6 +120,7 @@ void Controller::NextExercise() {
       exercise_page->text.setText(cur_exercise->text);
       exercise_page->input_widget->text_edit.clear();
     } else {
+      exercise_page->text.setText("Press the button and type, what you here.");
       exercise_page->audio_widget->text_edit.clear();
     }
     setCurrentWidget(exercise_page);
@@ -241,4 +246,3 @@ void Controller::ResetScore() {
   setting.setValue("score", 0);
   main_page_->SetScoreLabel(0);
 }
-

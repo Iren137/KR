@@ -10,17 +10,18 @@
 #include <QMessageBox>
 #include <QMovie>
 #include <QProgressBar>
+#include <QStackedWidget>
+
 #include "pick_exercise.h"
 #include "pick_widget.h"
-#include <QStackedWidget>
 #include "audio_widget.h"
 #include "input_widget.h"
-
 
 class ExercisePage : public QWidget {
  public:
   ExercisePage(QWidget* parent);
   void ChangeAttemptsLabel(int new_val);
+  void SetStyle();
 
  public:
   QGridLayout layout_{this};

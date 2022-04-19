@@ -5,16 +5,16 @@
 #include <QGridLayout>
 #include <QStackedWidget>
 #include <QPushButton>
-#include "input_exercise.h"
-#include "pick_exercise.h"
-#include "model.h"
-#include "randomizer.h"
 #include <QLabel>
 #include <QDialog>
 #include <QMovie>
 #include <QMessageBox>
 #include <QSettings>
 
+#include "input_exercise.h"
+#include "pick_exercise.h"
+#include "model.h"
+#include "randomizer.h"
 
 class MainPage;
 class ExercisePage;

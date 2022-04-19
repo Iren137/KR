@@ -1,6 +1,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <iostream>
+
 #include "model.h"
 
 Model::Model() {
@@ -77,5 +78,3 @@ Model::~Model() {
     }
   }
 }
-
-

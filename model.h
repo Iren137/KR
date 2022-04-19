@@ -1,20 +1,20 @@
 #ifndef MODEL_H
 #define MODEL_H
 
+#include <QMediaPlayer>
 #include <vector>
 
 #include "input_exercise.h"
 #include "pick_exercise.h"
 #include "audio_exercise.h"
 #include "randomizer.h"
-#include <QMediaPlayer>
 
 class Model {
  public:
   Model();
   ~Model();
 
- // private:
+ private:
   void FillInputExercises(const QString& file_path,
                           std::vector<Exercise*>& vec_ref);
   void FillPickExercises(const QString& file_path,
@@ -26,6 +26,8 @@ class Model {
   Randomizer pick_input_audio_randomizers[3] = {};
   Randomizer random_mode{};
   std::vector<QMediaPlayer> players{};
+
+  friend class Controller;
 };
 
 #endif //MODEL_H

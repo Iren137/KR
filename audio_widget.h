@@ -11,12 +11,9 @@ class AudioWidget : public QWidget {
   AudioWidget(QWidget* parent);
 
   QTextEdit text_edit{this};
-  QPushButton listen_button{this};
-
+  QPushButton listen_button{"Listen", this};
 
   QGridLayout layout{this};
-
-
 };
 
 #endif //AUDIO_WIDGET_H

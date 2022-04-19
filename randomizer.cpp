@@ -1,5 +1,6 @@
-#include "randomizer.h"
 #include <random>
+
+#include "randomizer.h"
 
 Randomizer::Randomizer() {}
 
@@ -18,6 +19,7 @@ void Randomizer::Delete(int x) {
     return;
   }
   vec_[index_of_[x]] = vec_.back();
+  index_of_[vec_.back()] = index_of_[x];
   vec_.pop_back();
   index_of_.erase(x);
 }

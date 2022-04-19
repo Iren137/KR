@@ -7,6 +7,10 @@ PickWidget::PickWidget(QWidget* parent) : QWidget(parent) {
   layout_.addWidget(&variant0_);
   layout_.addWidget(&variant1_);
   layout_.addWidget(&variant2_);
+
+  variant0_.setFont(QFont("Ubuntu", 15));
+  variant1_.setFont(QFont("Ubuntu", 15));
+  variant2_.setFont(QFont("Ubuntu", 15));
 }
 
 void PickWidget::SetAllUnchecked() {

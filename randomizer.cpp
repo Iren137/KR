@@ -6,9 +6,9 @@ Randomizer::Randomizer() {}
 
 int Randomizer::Generate() {
   static std::mt19937 gen((std::random_device()()));
-  if (vec_.empty()) {
-    throw std::runtime_error("No variants to generate");
-  }
+  // if (vec_.empty()) {
+  //   throw std::runtime_error("No variants to generate");
+  // }
   std::uniform_int_distribution<int> dist(0, static_cast<int>(vec_.size()) - 1);
   int i = dist(gen);
   return vec_[i];

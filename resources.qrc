@@ -1,0 +1,26 @@
+<RCC>
+    <qresource>
+        <file>input_exercises.txt</file>
+        <file>pick_exercises.txt</file>
+        <file>audio_exercises.txt</file>
+        <file>minions.gif</file>
+        <file>icon.png</file>
+    </qresource>
+
+    <qresource>
+        <file>Audio/correct.mp3</file>
+        <file>Audio/incorrect.mp3</file>
+        <file>Audio/1.wav</file>
+        <file>Audio/2.wav</file>
+        <file>Audio/3.wav</file>
+        <file>Audio/4.wav</file>
+        <file>Audio/5.wav</file>
+        <file>Audio/6.wav</file>
+        <file>Audio/7.wav</file>
+        <file>Audio/8.wav</file>
+        <file>Audio/9.wav</file>
+        <file>Audio/10.wav</file>
+        <file>Audio/11.wav</file>
+        <file>Audio/12.wav</file>
+    </qresource>
+</RCC>
